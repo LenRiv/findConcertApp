@@ -1,0 +1,15 @@
+<div class="card shadow mb-3 border bordere-2"   [ngClass]="{'border-danger': !miConcert.tickets, 'border-success': miConcert.tickets}" 
+ [routerLink]="['/concert', miConcert.id]">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="miConcert.photo" class="img-fluid rounded-start " [alt]="miConcert.title" />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">{{miConcert.title}}</h5>
+        <p class="card-concert fw-bold">Fecha: {{miConcert.day}}{{miConcert.month}}</p>
+        <p class="card-concert fw-bold">Ciudad: {{miConcert.city}}</p>
+        <p>No te lo puedes perder!!</p>
+      </div>
+    </div>   
+</div>

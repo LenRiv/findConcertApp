@@ -1,0 +1,17 @@
+
+<section>
+  <div class="d-flex justify-content-between">
+    <h2>Listado de Conciertos</h2>
+    <app-filtro (ticketsEmit)="filter($event)"></app-filtro>
+  </div>
+
+  <hr>
+  <div class="row">
+    <article *ngFor="let concert of concerts" class="col-12 col-md-6 col-lg-4">
+      <app-card-concert [miConcert]="concert"></app-card-concert>
+      <p class="fw-bold" [ngClass]="{'text-success' : concert.tickets, 'text-danger' : !concert.tickets}">{{(concert.tickets) ? 'Entradas disponibles.' : 'Sin entradas' }}</p>
+    </article>
+  </div>
+</section>
+
+<footer class="text-center">Author: Lorena Rivas Ramírez // Copyright@ 2023</footer>

@@ -1,0 +1,14 @@
+.navbar-nav.ms-auto {
+  margin-right: 40px;
+}
+
+.navbar-brand {
+  margin-left: 50px;
+  font-size: 2rem;
+  font-family: monospace, sans-serif;
+}
+
+.nav-link{
+  font-size: 1.5rem;
+  font-family: monospace, sans-serif;
+}

@@ -1,0 +1,14 @@
+<h3>{{concert.title}}</h3>
+<hr>
+<br>
+<div>
+  <figure class="col-12 col-md-4">
+    <img class="img-fluid" [src]="concert.photo" alt="concert.title">
+  </figure>
+  <div class="col-12 col-md-8"></div>
+  <p class="fw-bold">Fecha: {{ concert.day }} {{ concert.month }}</p>
+  <p class="fw-bold">Ciudad: {{ concert.city }}</p>
+  <p class="fw-bold">Entradas: <span [ngClass]="{'text-success' : concert.tickets, 'text-danger' : !concert.tickets}">{{ (concert.tickets) ? 'Disponibles' : 'Sin entradas.' }}</span>
+  </p>
+  <a class="btn btn-dark" [routerLink]="['/']">Listado de Conciertos</a>
+</div>
